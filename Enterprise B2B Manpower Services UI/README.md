@@ -1,0 +1,11 @@
+
+  # Enterprise B2B Manpower Services UI
+
+  This is a code bundle for Enterprise B2B Manpower Services UI. The original project is available at https://www.figma.com/design/OVQ0zqLiQwjxPaL8zt8SWw/Enterprise-B2B-Manpower-Services-UI.
+
+  ## Running the code
+
+  Run `npm i` to install the dependencies.
+
+  Run `npm run dev` to start the development server.
+  
