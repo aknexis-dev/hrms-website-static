@@ -27,10 +27,10 @@ export function JobDetailPage() {
     <div className="min-h-screen bg-[#F8FAFC]">
       {/* Hero */}
       <section className="pt-32 pb-12 bg-gradient-to-br from-white to-blue-50/30">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="container-responsive">
           <Link
             to="/careers"
-            className="inline-flex items-center space-x-2 text-[#2563EB] font-semibold mb-8 hover:underline"
+            className="inline-flex-center space-x-2 text-[#2563EB] font-semibold mb-8 hover:underline"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Back to Careers</span>
@@ -58,15 +58,15 @@ export function JobDetailPage() {
             </h1>
 
             <div className="flex flex-wrap items-center gap-8 text-gray-600 mb-8">
-              <div className="flex items-center space-x-2">
+              <div className="flex-center space-x-2">
                 <MapPin className="w-5 h-5" />
                 <span className="font-semibold">Mumbai, Maharashtra</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex-center space-x-2">
                 <Briefcase className="w-5 h-5" />
                 <span className="font-semibold">5-7 years experience</span>
               </div>
-              <div className="flex items-center space-x-2">
+              <div className="flex-center space-x-2">
                 <Clock className="w-5 h-5" />
                 <span className="font-semibold">Posted 2 days ago</span>
               </div>
@@ -74,7 +74,7 @@ export function JobDetailPage() {
 
             <a
               href="#apply"
-              className="inline-flex items-center space-x-2 px-10 py-4 bg-gradient-to-r from-[#2563EB] to-[#1e40af] text-white rounded-full font-semibold shadow-xl hover:scale-105 transition-all duration-300"
+              className="inline-flex-center space-x-2 px-10 py-4 bg-gradient-to-r from-[#2563EB] to-[#1e40af] text-white rounded-full font-semibold shadow-xl hover:scale-105 transition-all duration-300"
             >
               <span>Apply Now</span>
               <ArrowRight className="w-5 h-5" />
@@ -85,7 +85,7 @@ export function JobDetailPage() {
 
       {/* Job Details */}
       <section className="py-12">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="container-responsive">
           <div className="grid lg:grid-cols-3 gap-12">
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-8">
@@ -114,7 +114,7 @@ export function JobDetailPage() {
                     'Build and maintain talent pipeline for future requirements',
                     'Coordinate with operations teams for smooth candidate deployment',
                   ].map((item, index) => (
-                    <li key={index} className="flex items-start space-x-3">
+                    <li key={index} className="flex-start">
                       <CheckCircle2 className="w-6 h-6 text-[#2563EB] flex-shrink-0 mt-1" />
                       <span className="text-gray-700">{item}</span>
                     </li>
@@ -136,7 +136,7 @@ export function JobDetailPage() {
                     'Ability to work under pressure and meet tight deadlines',
                     'Willingness to travel to client locations as needed',
                   ].map((item, index) => (
-                    <li key={index} className="flex items-start space-x-3">
+                    <li key={index} className="flex-start">
                       <CheckCircle2 className="w-6 h-6 text-[#FACC15] flex-shrink-0 mt-1" />
                       <span className="text-gray-700">{item}</span>
                     </li>
@@ -156,7 +156,7 @@ export function JobDetailPage() {
                     'Professional development',
                     'Career growth opportunities',
                   ].map((benefit, index) => (
-                    <div key={index} className="flex items-center space-x-3">
+                    <div key={index} className="flex-center space-x-3">
                       <div className="w-2 h-2 bg-[#2563EB] rounded-full"></div>
                       <span className="text-gray-700 font-semibold">{benefit}</span>
                     </div>
@@ -170,7 +170,7 @@ export function JobDetailPage() {
               {/* Apply Form */}
               <div id="apply" className="bg-white rounded-[28px] p-8 shadow-lg border border-gray-100 sticky top-24">
                 <h3 className="text-2xl font-black text-[#0F172A] mb-6">Quick Apply</h3>
-                
+
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <label className="block text-sm font-semibold text-[#0F172A] mb-2">
@@ -234,7 +234,7 @@ export function JobDetailPage() {
 
                   <button
                     type="submit"
-                    className="w-full px-8 py-4 bg-gradient-to-r from-[#2563EB] to-[#1e40af] text-white rounded-full font-semibold shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
+                    className="w-full px-8 py-4 bg-gradient-to-r from-[#2563EB] to-[#1e40af] text-white rounded-full font-semibold shadow-xl hover:scale-105 transition-all duration-300 flex-center justify-center space-x-2"
                   >
                     <Send className="w-5 h-5" />
                     <span>Submit Application</span>
@@ -253,7 +253,7 @@ export function JobDetailPage() {
                       className="block p-4 rounded-xl bg-gray-50 hover:bg-blue-50 transition-colors"
                     >
                       <h4 className="font-bold text-[#0F172A] mb-2">{job.title}</h4>
-                      <div className="flex items-center space-x-2 text-sm text-gray-600">
+                      <div className="flex-center space-x-2 text-sm text-gray-600">
                         <MapPin className="w-4 h-4" />
                         <span>{job.location}</span>
                       </div>

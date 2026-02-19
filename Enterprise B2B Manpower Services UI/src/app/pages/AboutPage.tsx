@@ -43,27 +43,27 @@ export function AboutPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#F8FAFC] via-white to-blue-50/30">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <section className="hero-section">
+        <div className="container-responsive">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-block px-5 py-2 bg-blue-100 text-[#2563EB] rounded-full text-sm font-semibold mb-6"
+              className="badge-blue mb-6"
             >
               Trusted Since 2015
             </motion.div>
-            
+
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-5xl lg:text-6xl font-black text-[#0F172A] mb-6 leading-tight"
+              className="hero-title mb-6"
             >
               About HRMS Manpower Solutions
             </motion.h1>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -77,8 +77,8 @@ export function AboutPage() {
       </section>
 
       {/* Company Overview */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <section className="section-padding bg-white">
+        <div className="container-responsive">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -86,7 +86,7 @@ export function AboutPage() {
               viewport={{ once: true }}
               className="space-y-6"
             >
-              <h2 className="text-4xl lg:text-5xl font-black text-[#0F172A]">
+              <h2 className="section-title">
                 Leading Workforce Solutions Provider in India
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed">
@@ -108,7 +108,7 @@ export function AboutPage() {
             >
               <div className="rounded-[32px] overflow-hidden shadow-2xl">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1711720743865-10787dd6934a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBvZmZpY2UlMjBidWlsZGluZyUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NzEyMzM4MDh8MA&ixlib=rb-4.1.0&q=80&w=1080"
+                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop"
                   alt="HRMS Corporate Office"
                   className="w-full h-[600px] object-cover"
                 />
@@ -119,16 +119,16 @@ export function AboutPage() {
       </section>
 
       {/* Mission, Vision, Values */}
-      <section className="py-24 bg-gradient-to-br from-[#F8FAFC] to-blue-50/30">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <section className="section-padding bg-gradient-to-br from-[#F8FAFC] to-blue-50/30">
+        <div className="container-responsive">
           <div className="grid md:grid-cols-3 gap-8 mb-20">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="bg-white rounded-[28px] p-10 shadow-xl border border-gray-100"
+              className="card-container !p-10"
             >
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#2563EB] to-[#1e40af] flex items-center justify-center mb-6 shadow-lg">
+              <div className="icon-box mb-6">
                 <Target className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-black text-[#0F172A] mb-4">Our Mission</h3>
@@ -142,9 +142,9 @@ export function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="bg-white rounded-[28px] p-10 shadow-xl border border-gray-100"
+              className="card-container !p-10"
             >
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#FACC15] to-yellow-600 flex items-center justify-center mb-6 shadow-lg">
+              <div className="icon-box !bg-gradient-to-br !from-[#FACC15] !to-yellow-600 mb-6">
                 <Eye className="w-8 h-8 text-[#0F172A]" />
               </div>
               <h3 className="text-2xl font-black text-[#0F172A] mb-4">Our Vision</h3>
@@ -177,7 +177,7 @@ export function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl lg:text-5xl font-black text-[#0F172A] mb-4">
+            <h2 className="section-title">
               Our Core Values
             </h2>
           </motion.div>
@@ -190,12 +190,12 @@ export function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-[24px] p-8 shadow-lg border border-gray-100 text-center"
+                className="card-container !p-8 text-center"
               >
                 <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-50 to-white flex items-center justify-center mx-auto mb-6 border-2 border-[#2563EB]">
                   <value.icon className="w-7 h-7 text-[#2563EB]" />
                 </div>
-                <h3 className="text-xl font-black text-[#0F172A] mb-3">
+                <h3 className="large-text text-[#0F172A] mb-3">
                   {value.title}
                 </h3>
                 <p className="text-gray-600">{value.description}</p>
@@ -207,7 +207,7 @@ export function AboutPage() {
 
       {/* Statistics */}
       <section className="py-20 bg-gradient-to-r from-[#0F172A] via-[#1e293b] to-[#0F172A]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="container-responsive">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {stats.map((stat, index) => (
               <motion.div
@@ -229,18 +229,18 @@ export function AboutPage() {
       </section>
 
       {/* Certifications */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <section className="section-padding bg-white">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-black text-[#0F172A] mb-4">
+            <h2 className="section-title">
               Certifications & Compliance
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="section-subtitle">
               Fully certified and compliant with all regulatory requirements
             </p>
           </motion.div>
@@ -253,7 +253,7 @@ export function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gradient-to-br from-blue-50 to-white rounded-[20px] p-8 shadow-lg border border-gray-100 flex items-center space-x-4"
+                className="card-container !p-8 flex items-center space-x-4"
               >
                 <Shield className="w-10 h-10 text-[#2563EB] flex-shrink-0" />
                 <span className="text-[#0F172A] font-semibold text-lg">{cert}</span>
@@ -264,8 +264,8 @@ export function AboutPage() {
       </section>
 
       {/* Why Clients Trust Us */}
-      <section className="py-24 bg-[#F8FAFC]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <section className="section-padding bg-[#F8FAFC]">
+        <div className="container-responsive">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -274,7 +274,7 @@ export function AboutPage() {
             >
               <div className="rounded-[32px] overflow-hidden shadow-2xl">
                 <ImageWithFallback
-                  src="https://images.unsplash.com/photo-1745847768380-2caeadbb3b71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGhhbmRzaGFrZSUyMHBhcnRuZXJzaGlwJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc3MTMxMDQ0OXww&ixlib=rb-4.1.0&q=80&w=1080"
+                  src="https://images.unsplash.com/photo-1454165833767-131f36967718?q=80&w=2070&auto=format&fit=crop"
                   alt="Business Partnership"
                   className="w-full h-[500px] object-cover"
                 />
@@ -287,7 +287,7 @@ export function AboutPage() {
               viewport={{ once: true }}
               className="space-y-8"
             >
-              <h2 className="text-4xl lg:text-5xl font-black text-[#0F172A]">
+              <h2 className="section-title">
                 Why Clients Trust Us
               </h2>
 
@@ -313,12 +313,12 @@ export function AboutPage() {
                   description: 'From 10 to 1000+ workforce, we scale with your needs',
                 },
               ].map((reason, index) => (
-                <div key={index} className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#2563EB] to-[#1e40af] flex items-center justify-center flex-shrink-0 shadow-lg">
+                <div key={index} className="flex-start">
+                  <div className="icon-box !w-12 !h-12 flex-shrink-0">
                     <reason.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-black text-[#0F172A] mb-2">
+                    <h3 className="large-text text-[#0F172A] mb-2">
                       {reason.title}
                     </h3>
                     <p className="text-gray-600">{reason.description}</p>
@@ -331,19 +331,19 @@ export function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <section className="section-padding bg-white">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-[#2563EB] via-[#1e40af] to-[#1e3a8a] p-12 lg:p-20 shadow-2xl"
+            className="cta-banner"
           >
             <div className="relative z-10 text-center space-y-8">
-              <h2 className="text-4xl lg:text-5xl font-black text-white leading-tight">
+              <h2 className="cta-banner-title">
                 Partner With Us Today
               </h2>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              <p className="cta-banner-text">
                 Join 120+ enterprises who trust HRMS Manpower Solutions for their workforce needs
               </p>
               <Link

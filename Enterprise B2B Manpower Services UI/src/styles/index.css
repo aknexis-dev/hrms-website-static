@@ -1,6 +1,11 @@
 @import './fonts.css';
 @import './tailwind.css';
 @import './theme.css';
+@import './layout.css';
+@import './navbar.css';
+@import './hero.css';
+@import './components.css';
+@import './footer.css';
 
 /* Smooth scrolling for anchor links */
 html {

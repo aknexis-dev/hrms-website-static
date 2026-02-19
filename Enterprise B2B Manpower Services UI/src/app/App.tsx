@@ -11,6 +11,9 @@ import { ContactPage } from './pages/ContactPage';
 import { CareersPage } from './pages/CareersPage';
 import { JobDetailPage } from './pages/JobDetailPage';
 import { BlogPage } from './pages/BlogPage';
+import { PrivacyPage } from './pages/PrivacyPage';
+import { TermsPage } from './pages/TermsPage';
+import { CompliancePage } from './pages/CompliancePage';
 
 export default function App() {
   return (
@@ -29,6 +32,9 @@ export default function App() {
             <Route path="/careers" element={<CareersPage />} />
             <Route path="/careers/:id" element={<JobDetailPage />} />
             <Route path="/blog" element={<BlogPage />} />
+            <Route path="/privacy" element={<PrivacyPage />} />
+            <Route path="/terms" element={<TermsPage />} />
+            <Route path="/compliance" element={<CompliancePage />} />
           </Routes>
         </main>
         <Footer />

@@ -31,20 +31,20 @@ const services = [
 export function Services() {
   return (
     <section id="services" className="py-24 bg-gradient-to-br from-[#F8FAFC] to-blue-50/30">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="container-responsive">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-block px-5 py-2 bg-blue-100 text-[#2563EB] rounded-full text-sm font-semibold mb-4">
+          <div className="badge-blue mb-4">
             Our Services
           </div>
-          <h2 className="text-5xl font-black text-[#0F172A] mb-4">
+          <h2 className="section-title">
             Service Expertise
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="section-subtitle">
             Comprehensive workforce solutions tailored to your business needs
           </p>
         </motion.div>
@@ -58,31 +58,31 @@ export function Services() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="group bg-white rounded-[28px] p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100"
+              className="group card-container"
             >
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#2563EB] to-[#1e40af] flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+              <div className="icon-box mb-6 group-hover:scale-110">
                 <service.icon className="w-8 h-8 text-white" />
               </div>
-              
+
               <h3 className="text-2xl font-black text-[#0F172A] mb-3">
                 {service.title}
               </h3>
-              
+
               <p className="text-gray-600 mb-6">
                 {service.description}
               </p>
-              
+
               <div className="space-y-3">
                 {service.features.map((feature, fIndex) => (
-                  <div key={fIndex} className="flex items-center space-x-2">
-                    <div className="w-1.5 h-1.5 bg-[#FACC15] rounded-full"></div>
-                    <span className="text-gray-700 font-semibold">{feature}</span>
+                  <div key={fIndex} className="list-item-dot">
+                    <div className="dot"></div>
+                    <span>{feature}</span>
                   </div>
                 ))}
               </div>
-              
+
               <div className="mt-6 pt-6 border-t border-gray-100">
-                <button className="text-[#2563EB] font-semibold flex items-center space-x-2 group-hover:space-x-3 transition-all duration-300">
+                <button className="text-button-blue group-hover:space-x-3">
                   <span>Learn More</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -97,7 +97,7 @@ export function Services() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <button className="px-10 py-4 bg-gradient-to-r from-[#2563EB] to-[#1e40af] text-white rounded-full font-semibold shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center space-x-2">
+          <button className="px-10 py-4 blue-button shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center space-x-2">
             <span>View All Services</span>
             <ArrowRight className="w-5 h-5" />
           </button>

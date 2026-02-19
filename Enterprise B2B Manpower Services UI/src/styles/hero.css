@@ -1,0 +1,43 @@
+.hero-section {
+    @apply relative min-h-screen pt-32 pb-20 overflow-hidden;
+}
+
+.hero-bg-gradient {
+    @apply absolute inset-0 bg-gradient-to-br from-[#F8FAFC] via-white to-blue-50/30 -z-10;
+}
+
+.hero-title {
+    @apply text-5xl lg:text-6xl xl:text-7xl font-black text-[#0F172A] leading-[1.1];
+}
+
+.hero-description {
+    @apply space-y-3 text-xl text-gray-600;
+}
+
+.hero-image-container {
+    @apply relative rounded-[32px] overflow-hidden shadow-2xl;
+}
+
+.hero-image-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-[#0F172A]/20 to-transparent;
+}
+
+.floating-badge {
+    @apply absolute -bottom-6 -left-6 bg-gradient-to-br from-[#FACC15] to-yellow-600 rounded-2xl p-6 shadow-2xl;
+}
+
+.floating-stats-container {
+    @apply mt-20;
+}
+
+.floating-stats-bar {
+    @apply bg-white/80 backdrop-blur-xl rounded-[28px] p-8 shadow-2xl border border-white/50;
+}
+
+.stat-number {
+    @apply text-3xl font-black text-[#2563EB] mb-2;
+}
+
+.stat-label {
+    @apply text-sm text-gray-600 font-semibold;
+}

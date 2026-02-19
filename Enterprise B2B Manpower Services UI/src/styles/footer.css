@@ -1,0 +1,23 @@
+.footer-container {
+    @apply bg-gradient-to-br from-[#0F172A] via-[#1e293b] to-[#0F172A] text-white;
+}
+
+.footer-social-link {
+    @apply w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition-all duration-300 hover:bg-[#2563EB];
+}
+
+.footer-link-list {
+    @apply space-y-3;
+}
+
+.footer-link {
+    @apply text-gray-400 hover:text-[#FACC15] transition-colors;
+}
+
+.footer-contact-list {
+    @apply space-y-4;
+}
+
+.footer-bottom-bar {
+    @apply pt-8 border-t border-white/10;
+}

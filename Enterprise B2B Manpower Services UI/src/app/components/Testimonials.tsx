@@ -8,7 +8,7 @@ const testimonials = [
     name: 'Rajesh Kumar',
     role: 'Operations Head',
     company: 'Manufacturing Unit',
-    image: 'https://images.unsplash.com/photo-1758518727888-ffa196002e59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGV4ZWN1dGl2ZSUyMHBvcnRyYWl0JTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc3MTIwODk4MXww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=2066&auto=format&fit=crop',
     quote: 'HRMS Manpower Solutions provided us with highly skilled workers within 48 hours. Their verification process is thorough and professional. We have been working with them for 3 years now.',
     rating: 5,
   },
@@ -16,7 +16,7 @@ const testimonials = [
     name: 'Priya Sharma',
     role: 'HR Director',
     company: 'Logistics Company',
-    image: 'https://images.unsplash.com/photo-1758518727888-ffa196002e59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGV4ZWN1dGl2ZSUyMHBvcnRyYWl0JTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc3MTIwODk4MXww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1531973576160-7125cd663986?q=80&w=2070&auto=format&fit=crop',
     quote: 'The quality of workforce and the speed of deployment exceeded our expectations. Their compliance documentation is impeccable. Highly recommended for large-scale operations.',
     rating: 5,
   },
@@ -24,7 +24,7 @@ const testimonials = [
     name: 'Amit Patel',
     role: 'Plant Manager',
     company: 'Industrial Facility',
-    image: 'https://images.unsplash.com/photo-1758518727888-ffa196002e59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGV4ZWN1dGl2ZSUyMHBvcnRyYWl0JTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc3MTIwODk4MXww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop',
     quote: 'We deployed 200+ workers for our new facility through HRMS. The entire process was seamless, and the workforce quality has been consistently excellent. True professionals!',
     rating: 5,
   },
@@ -44,21 +44,21 @@ export function Testimonials() {
   const current = testimonials[currentIndex];
 
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section className="section-padding bg-white">
+      <div className="container-responsive">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-block px-5 py-2 bg-blue-100 text-[#2563EB] rounded-full text-sm font-semibold mb-4">
+          <div className="badge-blue mb-4">
             Client Testimonials
           </div>
-          <h2 className="text-5xl font-black text-[#0F172A] mb-4">
+          <h2 className="section-title">
             What Our Clients Say
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="section-subtitle">
             Trusted by leading enterprises across industries
           </p>
         </motion.div>
@@ -73,7 +73,7 @@ export function Testimonials() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               {/* Left - Quote */}
               <div className="space-y-6">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#FACC15] to-yellow-600 flex items-center justify-center shadow-xl">
+                <div className="icon-box !bg-gradient-to-br !from-[#FACC15] !to-yellow-600">
                   <Quote className="w-8 h-8 text-[#0F172A]" />
                 </div>
 
@@ -136,11 +136,10 @@ export function Testimonials() {
                   <button
                     key={index}
                     onClick={() => setCurrentIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                      index === currentIndex
-                        ? 'bg-[#2563EB] w-8'
-                        : 'bg-gray-300'
-                    }`}
+                    className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
+                      ? 'bg-[#2563EB] w-8'
+                      : 'bg-gray-300'
+                      }`}
                   />
                 ))}
               </div>

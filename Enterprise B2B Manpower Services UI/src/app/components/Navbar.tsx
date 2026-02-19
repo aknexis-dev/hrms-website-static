@@ -36,17 +36,13 @@ export function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled || isMobileMenuOpen
-          ? 'bg-white/98 backdrop-blur-lg shadow-lg'
-          : 'bg-transparent'
-      }`}
+      className={`navbar-container ${isScrolled || isMobileMenuOpen ? 'navbar-active' : 'navbar-transparent'}`}
     >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <div className="container-responsive">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#2563EB] to-[#1e40af] flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
+            <div className="logo-container">
               <span className="text-white font-black text-xl">H</span>
             </div>
             <div>
@@ -63,14 +59,10 @@ export function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-[#0F172A] font-semibold hover:text-[#2563EB] transition-colors duration-300 relative group ${
-                  location.pathname === link.path ? 'text-[#2563EB]' : ''
-                }`}
+                className={`nav-link ${location.pathname === link.path ? 'active' : ''}`}
               >
                 {link.name}
-                <span className={`absolute -bottom-1 left-0 h-0.5 bg-[#2563EB] transition-all duration-300 ${
-                  location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'
-                }`} />
+                <span className={`nav-link-underline ${location.pathname === link.path ? 'active' : 'inactive'}`} />
               </Link>
             ))}
           </div>
@@ -83,7 +75,7 @@ export function Navbar() {
             </div>
             <Link
               to="/contact"
-              className="px-8 py-3 bg-gradient-to-r from-[#2563EB] to-[#1e40af] text-white rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
+              className="px-8 py-3 blue-button font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
             >
               Hire Now
             </Link>
@@ -110,15 +102,13 @@ export function Navbar() {
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="lg:hidden py-6 space-y-4 border-t bg-white/95 backdrop-blur-lg"
+              className="mobile-menu"
             >
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`block text-[#0F172A] font-semibold py-2 hover:text-[#2563EB] transition-colors ${
-                    location.pathname === link.path ? 'text-[#2563EB]' : ''
-                  }`}
+                  className={`mobile-nav-link ${location.pathname === link.path ? 'active' : ''}`}
                 >
                   {link.name}
                 </Link>
@@ -130,7 +120,7 @@ export function Navbar() {
                 </div>
                 <Link
                   to="/contact"
-                  className="block w-full px-8 py-3 bg-gradient-to-r from-[#2563EB] to-[#1e40af] text-white rounded-full font-semibold text-center"
+                  className="block w-full px-8 py-3 blue-button text-center"
                 >
                   Hire Now
                 </Link>
