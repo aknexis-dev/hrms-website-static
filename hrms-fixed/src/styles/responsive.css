@@ -1,0 +1,485 @@
+/* ============================================================
+   responsive.css — Complete Mobile Responsiveness
+   Works on original hrms-ui-final Tailwind class names
+   Breakpoints: 480px, 640px, 768px, 1024px, 1280px
+   ============================================================ */
+
+/* ── GLOBAL RESET ── */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+img { max-width: 100%; }
+* { box-sizing: border-box; }
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+
+/* Logo text: clip on very small screens */
+@media (max-width: 380px) {
+  .navbar__logo-sub,
+  .flex.items-center.space-x-3 > div > div:last-child {
+    display: none;
+  }
+}
+
+/* Fix navbar inner container padding on mobile */
+@media (max-width: 1023px) {
+  .fixed.top-0.left-0.right-0 .max-w-7xl {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+}
+
+/* ============================================================
+   TYPOGRAPHY — Fluid font sizes
+   ============================================================ */
+
+/* Hero h1 */
+section#home h1.text-5xl,
+section#home h1.text-5xl.lg\:text-6xl,
+section#home h1.text-5xl.lg\:text-6xl.xl\:text-7xl {
+  font-size: clamp(2rem, 8vw, 4.5rem) !important;
+  line-height: 1.1;
+}
+
+/* Page hero h1 */
+.pt-32 h1.text-5xl.lg\:text-6xl {
+  font-size: clamp(1.875rem, 6vw, 3.75rem) !important;
+}
+
+/* Section headings */
+h2.text-5xl,
+h2.text-4xl.lg\:text-5xl,
+h2.text-5xl.font-black {
+  font-size: clamp(1.75rem, 5vw, 3.25rem) !important;
+  line-height: 1.15;
+}
+
+h2.text-4xl,
+h2.text-3xl.lg\:text-4xl {
+  font-size: clamp(1.5rem, 4vw, 2.5rem) !important;
+}
+
+/* Process/CTA headings */
+h2.text-4xl.lg\:text-6xl {
+  font-size: clamp(1.75rem, 6vw, 3.75rem) !important;
+}
+
+/* Body copy */
+.text-xl {
+  font-size: clamp(1rem, 2.5vw, 1.25rem) !important;
+}
+
+/* ============================================================
+   CONTAINERS — Responsive padding
+   ============================================================ */
+
+.max-w-7xl.mx-auto.px-6,
+.max-w-7xl.mx-auto.px-6.lg\:px-12 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 480px) {
+  .max-w-7xl.mx-auto.px-6,
+  .max-w-7xl.mx-auto.px-6.lg\:px-12 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .max-w-7xl.mx-auto.px-6,
+  .max-w-7xl.mx-auto.px-6.lg\:px-12 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .max-w-7xl.mx-auto.px-6.lg\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+/* ============================================================
+   SECTION PADDING — Reduce on mobile
+   ============================================================ */
+
+@media (max-width: 767px) {
+  .py-24 { padding-top: 3.5rem !important; padding-bottom: 3.5rem !important; }
+  .py-20 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  .pt-32 { padding-top: 5.5rem !important; }
+  .pb-20 { padding-bottom: 3rem !important; }
+  .pt-32.pb-12 { padding-bottom: 2rem !important; }
+  .p-12 { padding: 1.5rem !important; }
+  .p-10 { padding: 1.25rem !important; }
+  .lg\:p-20 { padding: 1.5rem !important; }
+  .p-8 { padding: 1.25rem !important; }
+  .gap-16 { gap: 2rem !important; }
+  .gap-12 { gap: 1.5rem !important; }
+  .mb-20 { margin-bottom: 3rem !important; }
+  .mb-16 { margin-bottom: 2.5rem !important; }
+  .mt-20 { margin-top: 4rem !important; }
+  .mt-16 { margin-top: 2.5rem !important; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .py-24 { padding-top: 4.5rem !important; padding-bottom: 4.5rem !important; }
+  .pt-32 { padding-top: 7rem !important; }
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+
+/* Floating badge — handled in component now */
+
+@media (max-width: 1023px) {
+  /* Stack hero columns */
+  section#home .grid.lg\:grid-cols-2 {
+    grid-template-columns: 1fr !important;
+    gap: 2.5rem;
+  }
+
+  /* Hero image height */
+  section#home img.h-\[600px\] {
+    height: 320px !important;
+  }
+}
+
+@media (max-width: 639px) {
+  section#home.min-h-screen {
+    min-height: auto;
+    padding-top: 6.5rem !important;
+  }
+  /* Stack CTA buttons */
+  .flex.flex-wrap.gap-4.pt-4 {
+    flex-direction: column;
+  }
+  .flex.flex-wrap.gap-4.pt-4 > * {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Stats bar grid */
+.grid.grid-cols-2.md\:grid-cols-5 {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .grid.grid-cols-2.md\:grid-cols-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* ============================================================
+   GRID LAYOUTS — All responsive
+   ============================================================ */
+
+/* 2-col mobile */
+@media (max-width: 767px) {
+  .grid.md\:grid-cols-2 { grid-template-columns: 1fr !important; }
+  .grid.md\:grid-cols-3 { grid-template-columns: 1fr !important; }
+  .grid.md\:grid-cols-2.lg\:grid-cols-4 { grid-template-columns: 1fr !important; }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .grid.md\:grid-cols-2 { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid.lg\:grid-cols-2 { grid-template-columns: 1fr !important; }
+  .grid.lg\:grid-cols-3 { grid-template-columns: repeat(2, 1fr) !important; }
+  .grid.lg\:grid-cols-4 { grid-template-columns: repeat(2, 1fr) !important; }
+  .grid.md\:grid-cols-2.lg\:grid-cols-4 { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+/* Industries: 1→2→3→4 */
+.grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4 {
+  grid-template-columns: 1fr;
+}
+@media (min-width: 480px) {
+  .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1280px) {
+  .grid.grid-cols-1.md\:grid-cols-2.lg\:grid-cols-3.xl\:grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Process: 1→2→3→5 */
+.grid.md\:grid-cols-3.lg\:grid-cols-5 {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 768px) {
+  .grid.md\:grid-cols-3.lg\:grid-cols-5 { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1024px) {
+  .grid.md\:grid-cols-3.lg\:grid-cols-5 { grid-template-columns: repeat(5, 1fr); }
+}
+
+/* Services: md:2 */
+@media (max-width: 639px) {
+  .grid.md\:grid-cols-2.gap-8 { grid-template-columns: 1fr !important; }
+}
+
+/* Engagement models: 1→2→4 */
+.grid.md\:grid-cols-2.lg\:grid-cols-4.gap-6 { grid-template-columns: 1fr; }
+@media (min-width: 640px) {
+  .grid.md\:grid-cols-2.lg\:grid-cols-4.gap-6 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .grid.md\:grid-cols-2.lg\:grid-cols-4.gap-6 { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* 2→3→6 stat grids */
+.grid.grid-cols-2.md\:grid-cols-3.lg\:grid-cols-6 { grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 768px) {
+  .grid.grid-cols-2.md\:grid-cols-3.lg\:grid-cols-6 { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1024px) {
+  .grid.grid-cols-2.md\:grid-cols-3.lg\:grid-cols-6 { grid-template-columns: repeat(6, 1fr); }
+}
+
+/* 2→4 grid */
+.grid.grid-cols-2.md\:grid-cols-4 { grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 768px) {
+  .grid.grid-cols-2.md\:grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Contact 5-col */
+@media (max-width: 1023px) {
+  .grid.lg\:grid-cols-5 { grid-template-columns: 1fr !important; }
+  .lg\:col-span-3, .lg\:col-span-2 { grid-column: span 1 !important; }
+}
+
+/* Job detail 3-col */
+@media (max-width: 1023px) {
+  .grid.lg\:grid-cols-3 { grid-template-columns: 1fr !important; }
+  .lg\:col-span-2 { grid-column: span 1 !important; }
+  .sticky.top-24 { position: static !important; }
+}
+
+/* About certs: 1→2→3 */
+.grid.md\:grid-cols-2.lg\:grid-cols-3.gap-6 { grid-template-columns: 1fr; }
+@media (min-width: 640px) {
+  .grid.md\:grid-cols-2.lg\:grid-cols-3.gap-6 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1024px) {
+  .grid.md\:grid-cols-2.lg\:grid-cols-3.gap-6 { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ============================================================
+   IMAGES — Responsive heights
+   ============================================================ */
+
+@media (max-width: 767px) {
+  .h-\[600px\] { height: 280px !important; }
+  .h-\[500px\] { height: 250px !important; }
+  .h-\[400px\] { height: 220px !important; }
+  .h-72 { height: 200px !important; }
+  .w-40.h-40 { width: 6rem !important; height: 6rem !important; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .h-\[600px\] { height: 380px !important; }
+  .h-\[500px\] { height: 320px !important; }
+}
+
+/* ============================================================
+   BUTTONS — CTA responsive wrapping
+   ============================================================ */
+
+/* CTA section buttons stack on mobile */
+@media (max-width: 639px) {
+  .flex.flex-wrap.items-center.justify-center.gap-4 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .flex.flex-wrap.items-center.justify-center.gap-4 > a,
+  .flex.flex-wrap.items-center.justify-center.gap-4 > button {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  /* Shrink large button padding */
+  .px-12.py-5 {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    font-size: 1rem !important;
+  }
+}
+
+/* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+
+@media (max-width: 1023px) {
+  .grid.lg\:grid-cols-2.gap-12.items-center {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Testimonial quote size */
+  p.text-2xl.text-gray-700 { font-size: 1.125rem !important; }
+}
+
+/* ============================================================
+   WHY CHOOSE US
+   ============================================================ */
+
+@media (max-width: 1023px) {
+  .absolute.-bottom-6.-right-6 {
+    bottom: -0.75rem !important;
+    right: -0.5rem !important;
+    padding: 0.875rem !important;
+  }
+  .absolute.-bottom-6.-right-6 .w-16.h-16 {
+    width: 2.75rem !important;
+    height: 2.75rem !important;
+  }
+  .absolute.-bottom-6.-right-6 .text-xl { font-size: 0.875rem !important; }
+}
+
+/* ============================================================
+   PROCESS STATS BAR
+   ============================================================ */
+
+@media (max-width: 767px) {
+  .flex.flex-col.md\:flex-row.items-center.justify-center.space-y-4.md\:space-y-0.md\:space-x-12 {
+    flex-direction: column !important;
+    gap: 1.5rem;
+  }
+  /* Hide vertical dividers */
+  .hidden.md\:block.w-px.h-16 { display: none !important; }
+  /* Stat numbers */
+  .text-4xl.font-black.text-\[\#FACC15\] { font-size: 2rem !important; }
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+@media (max-width: 767px) {
+  .grid.md\:grid-cols-2.lg\:grid-cols-4.gap-12 {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid.md\:grid-cols-2.lg\:grid-cols-4.gap-12 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 767px) {
+  .flex.flex-col.md\:flex-row.items-center.justify-between {
+    flex-direction: column !important;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+/* ============================================================
+   TRUST STRIP — Contain overflow
+   ============================================================ */
+
+section .relative { overflow: hidden; }
+
+/* ============================================================
+   BLOG PAGE — Featured article + grid
+   ============================================================ */
+
+@media (max-width: 1023px) {
+  .grid.lg\:grid-cols-2.gap-0 { grid-template-columns: 1fr !important; }
+  .relative.h-\[400px\].lg\:h-auto { height: 220px !important; }
+}
+@media (max-width: 767px) {
+  .grid.md\:grid-cols-2.lg\:grid-cols-3.gap-8 { grid-template-columns: 1fr !important; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid.md\:grid-cols-2.lg\:grid-cols-3.gap-8 { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+/* ============================================================
+   CONTACT — Form grid
+   ============================================================ */
+
+@media (max-width: 767px) {
+  .grid.md\:grid-cols-2.gap-6 { grid-template-columns: 1fr !important; }
+}
+
+/* ============================================================
+   PROCESS PAGE — Timeline
+   ============================================================ */
+
+@media (max-width: 1023px) {
+  .grid.lg\:grid-cols-12 { grid-template-columns: 1fr !important; }
+  .lg\:col-span-9, .lg\:col-span-3 { grid-column: span 1 !important; }
+}
+
+/* ============================================================
+   CAREERS — Job card layout
+   ============================================================ */
+
+@media (max-width: 1023px) {
+  .flex.flex-col.lg\:flex-row.lg\:items-center.lg\:justify-between.gap-6 {
+    flex-direction: column !important;
+  }
+}
+
+/* ============================================================
+   INDUSTRIES — Order reset on mobile
+   ============================================================ */
+
+@media (max-width: 1023px) {
+  .lg\:order-1, .lg\:order-2 { order: unset !important; }
+}
+
+/* ============================================================
+   CTA CARD
+   ============================================================ */
+
+@media (max-width: 767px) {
+  .relative.overflow-hidden.rounded-\[32px\].p-12.lg\:p-20 {
+    padding: 2rem 1.25rem !important;
+  }
+  .text-4xl.lg\:text-6xl.font-black.text-white {
+    font-size: clamp(1.5rem, 6vw, 2.25rem) !important;
+  }
+}
+
+/* ============================================================
+   MISC
+   ============================================================ */
+
+/* Newsletter form */
+@media (max-width: 639px) {
+  .flex.bg-white\/10 { flex-direction: column !important; gap: 0.75rem; }
+  .flex.bg-white\/10 input,
+  .flex.bg-white\/10 button { width: 100% !important; border-radius: 9999px !important; }
+}
+
+/* FAQ max width */
+@media (max-width: 767px) {
+  .max-w-4xl.mx-auto { padding-left: 0; padding-right: 0; }
+}
+
+/* Reduce icon size on small phones */
+@media (max-width: 479px) {
+  .w-24.h-24 { width: 5rem !important; height: 5rem !important; }
+  .w-16.h-16 { width: 3.25rem !important; height: 3.25rem !important; }
+}

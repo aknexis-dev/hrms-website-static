@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+@source '../**/*.{js,ts,jsx,tsx}';
+
+@import './fonts.css';
+@import './theme.css';
+@import './responsive.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.3s ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.3s ease-out;
+}
