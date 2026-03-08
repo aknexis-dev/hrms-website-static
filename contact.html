@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Vidya Vihar International School — address, phone, email and enquiry form.">
+  <title>Contact Us | Vidya Vihar International School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Page Hero -->
+<section class="page-hero">
+  <div class="page-hero-content container">
+    <h1>Contact Us</h1>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>›</span><span>Contact</span>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Main Section -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Left: Info cards + map -->
+      <div>
+        <h2 style="margin-bottom:0.5rem;">Get in Touch</h2>
+        <p style="margin-bottom:2rem; color:var(--text-light);">We're here to help. Reach us by phone, email, or visit our admissions office during school hours.</p>
+
+        <div class="contact-info-cards">
+          <div class="contact-card">
+            <div class="contact-card-icon">📍</div>
+            <div>
+              <h4>Our Address</h4>
+              <p>123 Education Lane, Knowledge Nagar,<br>City — 400001, State, India</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon">📞</div>
+            <div>
+              <h4>Phone Numbers</h4>
+              <p>Main Office: +91 22 1234 5678<br>Admissions: +91 98765 43210<br>WhatsApp: +91 98765 43210</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon">✉️</div>
+            <div>
+              <h4>Email Addresses</h4>
+              <p>General: info@vidyavihar.edu.in<br>Admissions: admissions@vidyavihar.edu.in<br>Principal: principal@vidyavihar.edu.in</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon">🕐</div>
+            <div>
+              <h4>Office Hours</h4>
+              <p>Monday – Friday: 8:00 AM – 4:30 PM<br>Saturday: 9:00 AM – 1:00 PM<br>Sunday & Holidays: Closed</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div style="margin-top:2rem; border-radius:var(--radius-lg); overflow:hidden; height:220px;">
+          <iframe
+            src="https://maps.google.com/maps?q=school+bengaluru&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="220" style="border:0; display:block;" allowfullscreen loading="lazy" title="School Map"></iframe>
+        </div>
+      </div>
+
+      <!-- Right: Contact form -->
+      <div>
+        <div class="form-card" style="max-width:100%;">
+          <h3 style="margin-bottom:0.5rem;">Send Us a Message</h3>
+          <p style="font-size:0.875rem; margin-bottom:1.75rem; color:var(--text-light);">Have a question? We'll respond within 24 hours.</p>
+          <form class="needs-validation" id="contact-form">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label for="c-name">Your Name <span class="required">*</span></label>
+                <input type="text" id="c-name" class="form-control" placeholder="Full Name" required>
+                <div class="form-error" id="err-c-name"></div>
+              </div>
+              <div class="form-group">
+                <label for="c-phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="c-phone" class="form-control" placeholder="10-digit number" required>
+                <div class="form-error" id="err-c-phone"></div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="c-email">Email Address <span class="required">*</span></label>
+              <input type="email" id="c-email" class="form-control" placeholder="your@email.com" required>
+              <div class="form-error" id="err-c-email"></div>
+            </div>
+            <div class="form-group">
+              <label for="c-subject">Subject <span class="required">*</span></label>
+              <select id="c-subject" class="form-control" required>
+                <option value="">Select Subject</option>
+                <option>Admission Enquiry</option>
+                <option>Fee Information</option>
+                <option>NIOS Program</option>
+                <option>Transport Enquiry</option>
+                <option>General Information</option>
+                <option>Complaint / Feedback</option>
+                <option>Partnership / Collaboration</option>
+                <option>Other</option>
+              </select>
+              <div class="form-error" id="err-c-subject"></div>
+            </div>
+            <div class="form-group">
+              <label for="c-message">Message <span class="required">*</span></label>
+              <textarea id="c-message" class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
+              <div class="form-error" id="err-c-message"></div>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Message</button>
+            <div class="form-success">✅ Message sent! We'll get back to you within 24 hours.</div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Quick Connect -->
+<section class="section-sm bg-light">
+  <div class="container">
+    <div class="section-title">
+      <h2>Quick Connect</h2>
+      <p>Reach the right department directly</p>
+    </div>
+    <div class="grid-4">
+      <div class="card" style="padding:1.5rem; text-align:center;">
+        <div style="font-size:2.5rem; margin-bottom:0.75rem;">🎓</div>
+        <h4>Admissions</h4>
+        <p style="font-size:0.875rem;">+91 98765 43210</p>
+        <p style="font-size:0.82rem; color:var(--text-light);">admissions@vidyavihar.edu.in</p>
+      </div>
+      <div class="card" style="padding:1.5rem; text-align:center;">
+        <div style="font-size:2.5rem; margin-bottom:0.75rem;">💰</div>
+        <h4>Accounts / Fees</h4>
+        <p style="font-size:0.875rem;">+91 22 1234 5679</p>
+        <p style="font-size:0.82rem; color:var(--text-light);">accounts@vidyavihar.edu.in</p>
+      </div>
+      <div class="card" style="padding:1.5rem; text-align:center;">
+        <div style="font-size:2.5rem; margin-bottom:0.75rem;">🚌</div>
+        <h4>Transport</h4>
+        <p style="font-size:0.875rem;">+91 98765 43211</p>
+        <p style="font-size:0.82rem; color:var(--text-light);">transport@vidyavihar.edu.in</p>
+      </div>
+      <div class="card" style="padding:1.5rem; text-align:center;">
+        <div style="font-size:2.5rem; margin-bottom:0.75rem;">📞</div>
+        <h4>Principal Office</h4>
+        <p style="font-size:0.875rem;">+91 22 1234 5680</p>
+        <p style="font-size:0.82rem; color:var(--text-light);">principal@vidyavihar.edu.in</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/components.js"></script>
+</body>
+</html>

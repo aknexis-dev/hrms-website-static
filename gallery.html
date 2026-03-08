@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery | Vidya Vihar International School</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+
+<section class="page-hero">
+  <div class="page-hero-content container">
+    <h1>Photo Gallery</h1>
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>›</span><span>Gallery</span>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-title animate">
+      <h2>Life at Vidya Vihar</h2>
+      <p>Capturing memories, milestones, and the spirit of our school community</p>
+    </div>
+    <div class="gallery-filter-tabs animate">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="events">Events</button>
+      <button class="filter-btn" data-filter="sports">Sports</button>
+      <button class="filter-btn" data-filter="academic">Academic</button>
+      <button class="filter-btn" data-filter="cultural">Cultural</button>
+      <button class="filter-btn" data-filter="awards">Awards</button>
+    </div>
+    <div class="gallery-full-grid animate" id="gallery-grid">
+      <div class="gallery-full-item" data-category="events">
+        <div class="gallery-thumb" style="background:linear-gradient(135deg,#1a3a5c,#2c5f8a);">🎉</div>
+        <div class="gallery-overlay">Annual Day 2024</div>
+      </div>
+      <div class="gallery-full-item" data-category="sports">
+        <div class="gallery-thumb" style="background:linear-gradient(135deg,#27ae60,#1abc9c);">⚽</div>
+        <div class="gallery-overlay">Sports Day 2024</div>
+      </div>
+      <div class="gallery-full-item" data-category="academic">
+        <div class="gallery-thumb" style="background:linear-gradient(135deg,#e74c3c,#c0392b);">🔬</div>
+        <div class="gallery-overlay">Science Exhibition</div>
+      </div>
+      <div class="gallery-full-item" data-category="cultural">
+        <div class="gallery-thumb" style="background:linear-gradient(135deg,#8e44ad,#9b59b6);">🎭</div>
+        <div class="gallery-overlay">Drama & Theatre</div>
+      </div>
+      <div class="gallery-full-item" data-category="awards">
+        <div class="gallery-thumb" style="background:linear-gradient(135deg,#f39c12,#e67e22);">🏆</div>
+        <div class="gallery-overlay">Award Ceremony 2024</div>
+      </div>
+      <div class="gallery-full-item" data-category="events">
+        <div class="gallery-thumb" style="background:linear-gradient(135deg,#2c5f8a,#3498db);">🎨</div>
+        <div class="gallery-overlay">Art Exhibition</div>
+      </div>
+      <div class="gallery-full-item" data-category="sports">
+        <div class="gallery-thumb" style="background:linear-gradient(135deg,#16a085,#1abc9c);">🏊</div>
+        <div class="gallery-overlay">Swimming Championship</div>
+      </div>
+      <div class="gallery-full-item" data-category="academic">
+        <div class="gallery-thumb" style="background:linear-gradient(135deg,#2980b9,#3498db);">🤖</div>
+        <div class="gallery-overlay">Robotics Workshop</div>
+      </div>
+      <div class="gallery-full-item" data-category="cultural">
+        <div class="gallery-thumb" style="background:linear-gradient(135deg,#c0392b,#e74c3c);">🎵</div>
+        <div class="gallery-overlay">Music Concert</div>
+      </div>
+      <div class="gallery-full-item" data-category="events">
+        <div class="gallery-thumb" style="background:linear-gradient(135deg,#1a3a5c,#8e44ad);">🇮🇳</div>
+        <div class="gallery-overlay">Republic Day Parade</div>
+      </div>
+      <div class="gallery-full-item" data-category="awards">
+        <div class="gallery-thumb" style="background:linear-gradient(135deg,#e67e22,#f39c12);">🥇</div>
+        <div class="gallery-overlay">Olympiad Winners</div>
+      </div>
+      <div class="gallery-full-item" data-category="sports">
+        <div class="gallery-thumb" style="background:linear-gradient(135deg,#27ae60,#2ecc71);">🏸</div>
+        <div class="gallery-overlay">Badminton Tournament</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/components.js"></script>
+</body>
+</html>
