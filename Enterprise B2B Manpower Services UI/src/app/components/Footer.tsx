@@ -4,13 +4,13 @@ import { Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Instagram } from 'luc
 
 export function Footer() {
   return (
-    <footer className="bg-gradient-to-br from-[#0F172A] via-[#1e293b] to-[#0F172A] text-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+    <footer className="footer-container">
+      <div className="container-responsive py-16">
+        <div className="column-grid gap-12 mb-12">
           {/* Company Info */}
           <div className="space-y-6">
-            <div className="flex items-center space-x-3">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#2563EB] to-[#1e40af] flex items-center justify-center shadow-lg">
+            <div className="flex-center space-x-3">
+              <div className="logo-container">
                 <span className="text-white font-black text-xl">H</span>
               </div>
               <div>
@@ -22,16 +22,16 @@ export function Footer() {
               Leading provider of skilled workforce solutions across India. Government registered and fully compliant with all labour regulations.
             </p>
             <div className="flex space-x-3">
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#2563EB] flex items-center justify-center transition-all duration-300">
+              <a href="#" className="footer-social-link">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#2563EB] flex items-center justify-center transition-all duration-300">
+              <a href="#" className="footer-social-link">
                 <Twitter className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#2563EB] flex items-center justify-center transition-all duration-300">
+              <a href="#" className="footer-social-link">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-white/10 hover:bg-[#2563EB] flex items-center justify-center transition-all duration-300">
+              <a href="#" className="footer-social-link">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>
@@ -39,33 +39,33 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-xl font-black mb-6">Quick Links</h3>
-            <ul className="space-y-3">
+            <h3 className="large-text mb-6">Quick Links</h3>
+            <ul className="footer-link-list">
               <li>
-                <a href="#home" className="text-gray-400 hover:text-[#FACC15] transition-colors">Home</a>
+                <a href="#home" className="footer-link">Home</a>
               </li>
               <li>
-                <a href="#services" className="text-gray-400 hover:text-[#FACC15] transition-colors">Services</a>
+                <a href="#services" className="footer-link">Services</a>
               </li>
               <li>
-                <a href="#industries" className="text-gray-400 hover:text-[#FACC15] transition-colors">Industries</a>
+                <a href="#industries" className="footer-link">Industries</a>
               </li>
               <li>
-                <a href="#process" className="text-gray-400 hover:text-[#FACC15] transition-colors">Process</a>
+                <a href="#process" className="footer-link">Process</a>
               </li>
               <li>
-                <a href="#about" className="text-gray-400 hover:text-[#FACC15] transition-colors">About Us</a>
+                <a href="#about" className="footer-link">About Us</a>
               </li>
               <li>
-                <Link to="/blog" className="text-gray-400 hover:text-[#FACC15] transition-colors">Blog & Insights</Link>
+                <Link to="/blog" className="footer-link">Blog & Insights</Link>
               </li>
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h3 className="text-xl font-black mb-6">Our Services</h3>
-            <ul className="space-y-3">
+            <h3 className="large-text mb-6">Our Services</h3>
+            <ul className="footer-link-list">
               <li className="text-gray-400">Manufacturing Workforce</li>
               <li className="text-gray-400">Logistics Staff</li>
               <li className="text-gray-400">Technicians & Welders</li>
@@ -77,23 +77,23 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-xl font-black mb-6">Contact Us</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start space-x-3">
+            <h3 className="large-text mb-6">Contact Us</h3>
+            <ul className="footer-contact-list">
+              <li className="flex-start">
                 <Phone className="w-5 h-5 text-[#FACC15] mt-1 flex-shrink-0" />
                 <div>
                   <div className="font-semibold">+91 98765 43210</div>
                   <div className="text-sm text-gray-400">Mon-Sat, 9AM-6PM</div>
                 </div>
               </li>
-              <li className="flex items-start space-x-3">
+              <li className="flex-start">
                 <Mail className="w-5 h-5 text-[#FACC15] mt-1 flex-shrink-0" />
                 <div>
                   <div className="font-semibold">contact@hrmsmanpower.com</div>
                   <div className="text-sm text-gray-400">Quick Response</div>
                 </div>
               </li>
-              <li className="flex items-start space-x-3">
+              <li className="flex-start">
                 <MapPin className="w-5 h-5 text-[#FACC15] mt-1 flex-shrink-0" />
                 <div>
                   <div className="font-semibold">Corporate Office</div>
@@ -105,15 +105,15 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-white/10">
+        <div className="footer-bottom-bar">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <p className="text-gray-400 text-sm text-center md:text-left">
               © 2026 HRMS Manpower Solutions — Government-Compliant Workforce Provider
             </p>
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-[#FACC15] transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-[#FACC15] transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-[#FACC15] transition-colors">Compliance</a>
+              <Link to="/privacy" className="footer-link">Privacy Policy</Link>
+              <Link to="/terms" className="footer-link">Terms of Service</Link>
+              <Link to="/compliance" className="footer-link">Compliance</Link>
             </div>
           </div>
         </div>

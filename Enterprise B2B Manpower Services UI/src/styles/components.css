@@ -1,0 +1,200 @@
+/* Component specific styles */
+
+.section-padding {
+    @apply py-24;
+}
+
+.section-title {
+    @apply text-5xl font-black text-[#0F172A] mb-4;
+}
+
+.section-subtitle {
+    @apply text-xl text-gray-600 max-w-3xl mx-auto;
+}
+
+.card-container {
+    @apply bg-white rounded-[28px] p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100;
+}
+
+.badge-blue {
+    @apply inline-block px-5 py-2 bg-blue-100 text-[#2563EB] rounded-full text-sm font-semibold;
+}
+
+.badge-yellow {
+    @apply inline-block px-5 py-2 bg-[#FACC15]/20 text-[#FACC15] rounded-full text-sm font-semibold;
+}
+
+
+/* Card pattern with image and overlay */
+.image-card {
+    @apply relative overflow-hidden rounded-[28px] shadow-xl cursor-pointer;
+}
+
+.image-card-img {
+    @apply w-full h-full object-cover transition-transform duration-500 group-hover:scale-110;
+}
+
+.image-card-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/50 to-transparent opacity-70 group-hover:opacity-90 transition-opacity duration-300;
+}
+
+.image-card-content {
+    @apply absolute bottom-0 left-0 right-0 p-6;
+}
+
+.image-card-title {
+    @apply text-2xl font-black text-white mb-2;
+}
+
+.image-card-action {
+    @apply flex items-center space-x-2 text-[#FACC15] opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+}
+
+.icon-box {
+    @apply w-16 h-16 rounded-2xl bg-gradient-to-br from-[#2563EB] to-[#1e40af] flex items-center justify-center shadow-lg transition-transform duration-300;
+}
+
+.list-item-dot {
+    @apply flex items-center space-x-2;
+}
+
+.list-item-dot .dot {
+    @apply w-1.5 h-1.5 bg-[#FACC15] rounded-full;
+}
+
+.list-item-dot span {
+    @apply text-gray-700 font-semibold;
+}
+
+.text-button-blue {
+    @apply text-[#2563EB] font-semibold flex items-center space-x-2 transition-all duration-300;
+}
+
+/* Benefit/Feature Card */
+.benefit-card {
+    @apply bg-gradient-to-br from-blue-50 to-white rounded-[24px] p-8 shadow-lg border border-gray-100 text-center;
+}
+
+/* Filter Box */
+.filter-box {
+    @apply bg-white rounded-[24px] p-6 shadow-lg mb-12 border border-gray-100;
+}
+
+.filter-label {
+    @apply block text-sm font-semibold text-[#0F172A] mb-2;
+}
+
+.filter-select {
+    @apply w-full px-5 py-3 rounded-xl border-2 border-gray-200 focus:border-[#2563EB] outline-none transition-colors;
+}
+
+/* CTA Banner */
+.cta-banner {
+    @apply relative overflow-hidden rounded-[32px] bg-gradient-to-br from-[#2563EB] via-[#1e40af] to-[#1e3a8a] p-12 lg:p-20 shadow-2xl;
+}
+
+.cta-banner-title {
+    @apply text-4xl lg:text-5xl font-black text-white leading-tight;
+}
+
+.cta-banner-text {
+    @apply text-xl text-blue-100 max-w-3xl mx-auto;
+}
+
+/* Step/Process Timeline */
+.step-container {
+    @apply relative grid lg:grid-cols-12 gap-8 items-center;
+}
+
+.step-icon-box {
+    @apply w-20 h-20 rounded-2xl bg-gradient-to-br from-[#FACC15] to-yellow-600 flex items-center justify-center shadow-2xl;
+}
+
+.step-number-badge {
+    @apply absolute -top-3 -right-3 w-10 h-10 rounded-full bg-[#2563EB] flex items-center justify-center shadow-xl text-white font-black text-sm;
+}
+
+.checkpoint-box {
+    @apply bg-white rounded-2xl p-6 shadow-md flex items-start space-x-4;
+}
+
+.checkpoint-title {
+    @apply font-black text-[#0F172A] mb-1;
+}
+
+.dark-feature-card {
+    @apply flex items-start space-x-4 bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10;
+}
+
+/* Accordion */
+.accordion-item {
+    @apply bg-white rounded-[20px] shadow-lg overflow-hidden border border-gray-100 mb-4;
+}
+
+.accordion-trigger {
+    @apply w-full flex items-center justify-between p-6 text-left  hover:bg-gray-50 transition-colors;
+}
+
+.accordion-trigger .question {
+    @apply text-lg font-black text-[#0F172A] pr-8;
+}
+
+.accordion-trigger .icon {
+    @apply w-5 h-5 text-[#2563EB] transition-transform duration-300 group-data-[state=open]:rotate-180 flex-shrink-0;
+}
+
+.accordion-content {
+    @apply overflow-hidden data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up;
+}
+
+.accordion-content-text {
+    @apply px-6 pb-6 text-gray-600 leading-relaxed;
+}
+
+/* Number Box */
+.number-box-yellow {
+    @apply w-12 h-12 rounded-xl bg-gradient-to-br from-[#FACC15] to-yellow-600 flex items-center justify-center shadow-lg;
+}
+
+.number-box-yellow span {
+    @apply text-[#0F172A] font-black text-xl;
+}
+
+/* Forms */
+.form-label {
+    @apply block text-sm font-semibold text-[#0F172A] mb-2;
+}
+
+.form-input {
+    @apply w-full px-5 py-4 rounded-2xl border-2 border-gray-200 focus:border-[#2563EB] outline-none transition-colors;
+}
+
+.form-select {
+    @apply w-full px-5 py-4 rounded-2xl border-2 border-gray-200 focus:border-[#2563EB] outline-none transition-colors;
+}
+
+.form-textarea {
+    @apply w-full px-5 py-4 rounded-2xl border-2 border-gray-200 focus:border-[#2563EB] outline-none transition-colors resize-none;
+}
+
+/* Contact Specific */
+.contact-card {
+    @apply bg-gradient-to-br from-blue-50 to-white rounded-[24px] p-8 shadow-lg border border-gray-100;
+}
+
+.contact-card-icon-box {
+    @apply w-14 h-14 rounded-xl flex items-center justify-center mb-6 shadow-lg;
+}
+
+.contact-card-icon-box.blue {
+    @apply bg-gradient-to-br from-[#2563EB] to-[#1e40af];
+}
+
+.contact-card-icon-box.yellow {
+    @apply bg-gradient-to-br from-[#FACC15] to-yellow-600;
+}
+
+
+
+
+

@@ -1,25 +1,22 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { Phone, Menu, X } from 'lucide-react';
-import { Link, useLocation } from 'react-router';
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'motion/react'
+import { Phone, Menu, X } from 'lucide-react'
+import { Link, useLocation } from 'react-router'
 
 export function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
+  const [isScrolled, setIsScrolled] = useState(false)
+  const [isMobileOpen, setIsMobileOpen] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    const handleScroll = () => setIsScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   useEffect(() => {
-    setIsMobileMenuOpen(false);
-    window.scrollTo(0, 0);
-  }, [location]);
+    setIsMobileOpen(false)
+  }, [location])
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -29,116 +26,139 @@ export function Navbar() {
     { name: 'About Us', path: '/about' },
     { name: 'Careers', path: '/careers' },
     { name: 'Contact', path: '/contact' },
-  ];
+  ]
 
   return (
-    <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled || isMobileMenuOpen
-          ? 'bg-white/98 backdrop-blur-lg shadow-lg'
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 group">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#2563EB] to-[#1e40af] flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300">
-              <span className="text-white font-black text-xl">H</span>
-            </div>
-            <div>
-              <div className="font-black text-lg tracking-tight text-[#0F172A]">
-                HRMS Manpower Solutions
-              </div>
-              <div className="text-xs text-gray-600">Government Registered</div>
-            </div>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`text-[#0F172A] font-semibold hover:text-[#2563EB] transition-colors duration-300 relative group ${
-                  location.pathname === link.path ? 'text-[#2563EB]' : ''
-                }`}
-              >
-                {link.name}
-                <span className={`absolute -bottom-1 left-0 h-0.5 bg-[#2563EB] transition-all duration-300 ${
-                  location.pathname === link.path ? 'w-full' : 'w-0 group-hover:w-full'
-                }`} />
-              </Link>
-            ))}
+    <>
+      <motion.nav
+        role="navigation"
+        aria-label="Main Navigation"
+        initial={{ y: -80 }}
+        animate={{ y: 0 }}
+        transition={{ duration: 0.4 }}
+        className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 lg:px-12 h-16 lg:h-20 transition-all duration-300 ${isScrolled || isMobileOpen
+            ? 'navbar-active bg-white shadow-md'
+            : 'navbar-transparent bg-transparent'
+          }`}
+      >
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-3 shrink-0 logo-container" aria-label="Home">
+          <div className="w-10 h-10 flex items-center justify-center bg-blue-600 text-white font-bold rounded-md">
+            H
           </div>
-
-          {/* Right Section */}
-          <div className="hidden lg:flex items-center space-x-6">
-            <div className="flex items-center space-x-2 text-[#0F172A]">
-              <Phone className="w-4 h-4" />
-              <span className="font-semibold">+91 98765 43210</span>
-            </div>
-            <Link
-              to="/contact"
-              className="px-8 py-3 bg-gradient-to-r from-[#2563EB] to-[#1e40af] text-white rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300"
-            >
-              Hire Now
-            </Link>
+          <div className="leading-tight">
+            <p className="font-bold text-base text-slate-900">
+              HRMS Manpower Solutions
+            </p>
+            <p className="text-xs text-slate-500">
+              Government Registered
+            </p>
           </div>
+        </Link>
 
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 hover:bg-gray-100 rounded-lg transition-colors"
-          >
-            {isMobileMenuOpen ? (
-              <X className="w-6 h-6 text-[#0F172A]" />
-            ) : (
-              <Menu className="w-6 h-6 text-[#0F172A]" />
-            )}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        <AnimatePresence>
-          {isMobileMenuOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="lg:hidden py-6 space-y-4 border-t bg-white/95 backdrop-blur-lg"
-            >
-              {navLinks.map((link) => (
+        {/* Desktop Navigation */}
+        <ul className="hidden lg:flex flex-1 justify-center items-center gap-8 nav-menu">
+          {navLinks.map(link => {
+            const active = location.pathname === link.path
+            return (
+              <li key={link.path} className="nav-item">
                 <Link
-                  key={link.path}
                   to={link.path}
-                  className={`block text-[#0F172A] font-semibold py-2 hover:text-[#2563EB] transition-colors ${
-                    location.pathname === link.path ? 'text-[#2563EB]' : ''
-                  }`}
+                  aria-current={active ? 'page' : undefined}
+                  className={`nav-link relative text-sm font-medium transition-colors duration-200 group flex flex-col ${active ? 'text-blue-600 active' : 'text-slate-700 hover:text-blue-600'
+                    }`}
                 >
                   {link.name}
+                  <span
+                    className={`nav-link-underline absolute left-0 -bottom-1 h-[2px] transition-transform duration-300 origin-left ${active
+                        ? 'bg-blue-600 w-full scale-x-100 active'
+                        : 'bg-blue-600 w-full scale-x-0 group-hover:scale-x-100 inactive'
+                      }`}
+                  />
                 </Link>
-              ))}
-              <div className="pt-4 space-y-3">
-                <div className="flex items-center space-x-2 text-[#0F172A]">
-                  <Phone className="w-4 h-4" />
-                  <span className="font-semibold">+91 98765 43210</span>
-                </div>
-                <Link
-                  to="/contact"
-                  className="block w-full px-8 py-3 bg-gradient-to-r from-[#2563EB] to-[#1e40af] text-white rounded-full font-semibold text-center"
-                >
-                  Hire Now
-                </Link>
-              </div>
-            </motion.div>
+              </li>
+            )
+          })}
+        </ul>
+
+        {/* Right Section */}
+        <div className="hidden lg:flex items-center gap-6 shrink-0">
+          <div className="flex items-center gap-2 text-slate-700 text-sm">
+            <Phone className="w-4 h-4" aria-hidden="true" />
+            <span className="font-medium">+91 98765 43210</span>
+          </div>
+
+          <Link
+            to="/contact"
+            className="cta-button px-6 py-2.5 bg-blue-600 text-white rounded-md font-medium hover:bg-blue-700 transition"
+          >
+            Hire Now
+          </Link>
+        </div>
+
+        {/* Mobile Toggle */}
+        <button
+          onClick={() => setIsMobileOpen(!isMobileOpen)}
+          className="lg:hidden p-2 relative z-50"
+          aria-expanded={isMobileOpen}
+          aria-label="Toggle navigation menu"
+          aria-controls="mobile-nav-menu"
+        >
+          {isMobileOpen ? (
+            <X className="w-6 h-6 text-slate-800" aria-hidden="true" />
+          ) : (
+            <Menu className="w-6 h-6 text-slate-800" aria-hidden="true" />
           )}
-        </AnimatePresence>
-      </div>
-    </motion.nav>
-  );
+        </button>
+      </motion.nav>
+
+      {/* Mobile Overlay Menu */}
+      <AnimatePresence>
+        {isMobileOpen && (
+          <motion.nav
+            id="mobile-nav-menu"
+            role="navigation"
+            aria-label="Mobile Navigation"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 bg-white z-40 pt-24 px-6 lg:hidden overflow-y-auto overscroll-contain mobile-menu"
+          >
+            <ul className="flex flex-col gap-6 text-lg font-medium nav-menu">
+              {navLinks.map(link => {
+                const active = location.pathname === link.path
+                return (
+                  <li key={link.path} className="nav-item">
+                    <Link
+                      to={link.path}
+                      aria-current={active ? 'page' : undefined}
+                      className={`nav-link mobile-nav-link block ${active ? 'text-blue-600 active' : 'text-slate-800'
+                        }`}
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                )
+              })}
+            </ul>
+
+            <div className="pt-6 mt-6 border-t space-y-4">
+              <div className="flex items-center gap-2 text-slate-700">
+                <Phone className="w-4 h-4" aria-hidden="true" />
+                <span>+91 98765 43210</span>
+              </div>
+
+              <Link
+                to="/contact"
+                className="cta-button block w-full text-center py-3 bg-blue-600 text-white rounded-md font-medium"
+              >
+                Hire Now
+              </Link>
+            </div>
+          </motion.nav>
+        )}
+      </AnimatePresence>
+    </>
+  )
 }

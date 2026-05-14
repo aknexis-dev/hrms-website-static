@@ -1,0 +1,47 @@
+.navbar-container {
+    @apply fixed top-0 left-0 right-0 z-50 transition-all duration-500;
+}
+
+.navbar-active {
+    @apply bg-white/98 backdrop-blur-lg shadow-lg;
+}
+
+.navbar-transparent {
+    @apply bg-transparent;
+}
+
+.nav-link {
+    @apply text-[#0F172A] font-semibold hover:text-[#2563EB] transition-colors duration-300 relative;
+}
+
+.nav-link.active {
+    @apply text-[#2563EB];
+}
+
+.nav-link-underline {
+    @apply absolute -bottom-1 left-0 h-0.5 bg-[#2563EB] transition-all duration-300;
+}
+
+.nav-link-underline.active {
+    @apply w-full;
+}
+
+.nav-link-underline.inactive {
+    @apply w-0 group-hover:w-full;
+}
+
+.logo-container {
+    @apply w-12 h-12 rounded-xl bg-gradient-to-br from-[#2563EB] to-[#1e40af] flex items-center justify-center shadow-lg group-hover:scale-105 transition-transform duration-300;
+}
+
+.mobile-menu {
+    @apply lg:hidden py-6 space-y-4 border-t bg-white/95 backdrop-blur-lg;
+}
+
+.mobile-nav-link {
+    @apply block text-[#0F172A] font-semibold py-2 hover:text-[#2563EB] transition-colors;
+}
+
+.mobile-nav-link.active {
+    @apply text-[#2563EB];
+}

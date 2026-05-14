@@ -9,7 +9,7 @@ const articles = [
     id: 1,
     title: 'Understanding Labour Law Compliance in India: A Complete Guide for Employers',
     excerpt: 'Navigate the complex landscape of Indian labour laws with our comprehensive guide covering EPF, ESI, and statutory compliance requirements.',
-    image: 'https://images.unsplash.com/photo-1704969724221-8b7361b61f75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21wbGlhbmNlJTIwZG9jdW1lbnRzJTIwbGVnYWwlMjBidXNpbmVzc3xlbnwxfHx8fDE3NzEzMTA2MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop',
     category: 'Compliance',
     date: 'February 15, 2026',
     author: 'Compliance Team',
@@ -19,7 +19,7 @@ const articles = [
     id: 2,
     title: '5 Key Strategies for Effective Bulk Hiring in Manufacturing Sector',
     excerpt: 'Learn proven strategies to successfully execute large-scale recruitment for manufacturing facilities while maintaining quality standards.',
-    image: 'https://images.unsplash.com/photo-1769740333462-9a63bfa914bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwbWVldGluZyUyMGNvcnBvcmF0ZSUyMG9mZmljZXxlbnwxfHx8fDE3NzEzMTA1NDV8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https:///photo-1581091226825-a6a2a5aee158?q=80&w=2070&auto=format&fit=crop',
     category: 'Staffing',
     date: 'February 12, 2026',
     author: 'HR Team',
@@ -29,7 +29,7 @@ const articles = [
     id: 3,
     title: 'The Future of Contract Staffing: Trends Shaping the Industry in 2026',
     excerpt: 'Explore emerging trends in contract staffing including gig economy integration, technology adoption, and changing workforce preferences.',
-    image: 'https://images.unsplash.com/photo-1762341107834-a3437dd0ae62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMHdyaXRpbmclMjBkZXNrfGVufDF8fHx8MTc3MTMxMDYwNnww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop',
     category: 'Industry Trends',
     date: 'February 10, 2026',
     author: 'Research Team',
@@ -39,7 +39,7 @@ const articles = [
     id: 4,
     title: 'How to Build a Sustainable Workforce Pipeline for Your Organization',
     excerpt: 'Discover best practices for creating and maintaining a robust talent pipeline that meets your organization\'s evolving needs.',
-    image: 'https://images.unsplash.com/photo-1769740333462-9a63bfa914bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwbWVldGluZyUyMGNvcnBvcmF0ZSUyMG9mZmljZXxlbnwxfHx8fDE3NzEzMTA1NDV8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2070&auto=format&fit=crop',
     category: 'HR',
     date: 'February 8, 2026',
     author: 'Strategy Team',
@@ -49,7 +49,7 @@ const articles = [
     id: 5,
     title: 'Background Verification: Why It Matters More Than Ever',
     excerpt: 'Understanding the critical importance of thorough background checks in today\'s hiring landscape and best practices for implementation.',
-    image: 'https://images.unsplash.com/photo-1704969724221-8b7361b61f75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21wbGlhbmNlJTIwZG9jdW1lbnRzJTIwbGVnYWwlMjBidXNpbmVzc3xlbnwxfHx8fDE3NzEzMTA2MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2070&auto=format&fit=crop',
     category: 'Compliance',
     date: 'February 5, 2026',
     author: 'Compliance Team',
@@ -59,7 +59,7 @@ const articles = [
     id: 6,
     title: 'Optimizing Workforce Deployment: Lessons from Successful Projects',
     excerpt: 'Real-world case studies and insights from successful workforce deployment projects across various industries.',
-    image: 'https://images.unsplash.com/photo-1762341107834-a3437dd0ae62?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHByb2Zlc3Npb25hbCUyMHdyaXRpbmclMjBkZXNrfGVufDF8fHx8MTc3MTMxMDYwNnww&ixlib=rb-4.1.0&q=80&w=1080',
+    image: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop',
     category: 'Staffing',
     date: 'February 3, 2026',
     author: 'Operations Team',
@@ -72,8 +72,8 @@ const categories = ['All', 'Compliance', 'Staffing', 'HR', 'Industry Trends'];
 export function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  const filteredArticles = selectedCategory === 'All' 
-    ? articles 
+  const filteredArticles = selectedCategory === 'All'
+    ? articles
     : articles.filter(article => article.category === selectedCategory);
 
   const featuredArticle = articles[0];
@@ -82,7 +82,7 @@ export function BlogPage() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#F8FAFC] via-white to-blue-50/30">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="container-responsive">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -92,7 +92,7 @@ export function BlogPage() {
             >
               Knowledge Hub
             </motion.div>
-            
+
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -101,7 +101,7 @@ export function BlogPage() {
             >
               Insights & Industry Updates
             </motion.h1>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -116,7 +116,7 @@ export function BlogPage() {
 
       {/* Featured Article */}
       <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -138,7 +138,7 @@ export function BlogPage() {
               </div>
 
               <div className="p-10 lg:p-12 flex flex-col justify-center">
-                <div className="flex items-center space-x-4 mb-6">
+                <div className="flex-center space-x-4 mb-6">
                   <span className="px-4 py-2 bg-blue-100 text-[#2563EB] rounded-full text-sm font-semibold">
                     {featuredArticle.category}
                   </span>
@@ -153,18 +153,18 @@ export function BlogPage() {
                   {featuredArticle.excerpt}
                 </p>
 
-                <div className="flex items-center space-x-6 mb-6 text-sm text-gray-600">
-                  <div className="flex items-center space-x-2">
+                <div className="flex-center space-x-6 mb-6 text-sm text-gray-600">
+                  <div className="flex-center space-x-2">
                     <User className="w-4 h-4" />
                     <span>{featuredArticle.author}</span>
                   </div>
-                  <div className="flex items-center space-x-2">
+                  <div className="flex-center space-x-2">
                     <Calendar className="w-4 h-4" />
                     <span>{featuredArticle.date}</span>
                   </div>
                 </div>
 
-                <button className="inline-flex items-center space-x-2 text-[#2563EB] font-semibold hover:underline">
+                <button className="inline-flex-center space-x-2 text-[#2563EB] font-semibold hover:underline">
                   <span>Read Full Article</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -176,17 +176,16 @@ export function BlogPage() {
 
       {/* Category Filter */}
       <section className="py-12 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="container-responsive">
           <div className="flex flex-wrap items-center justify-center gap-4">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
-                  selectedCategory === category
-                    ? 'bg-gradient-to-r from-[#2563EB] to-[#1e40af] text-white shadow-lg'
-                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                }`}
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${selectedCategory === category
+                  ? 'bg-gradient-to-r from-[#2563EB] to-[#1e40af] text-white shadow-lg'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
               >
                 {category}
               </button>
@@ -197,7 +196,7 @@ export function BlogPage() {
 
       {/* Article Grid */}
       <section className="py-12 bg-[#F8FAFC]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="container-responsive">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredArticles.slice(1).map((article, index) => (
               <motion.article
@@ -222,8 +221,8 @@ export function BlogPage() {
                 </div>
 
                 <div className="p-6">
-                  <div className="flex items-center space-x-4 mb-4 text-xs text-gray-600">
-                    <div className="flex items-center space-x-1">
+                  <div className="flex-center space-x-4 mb-4 text-xs text-gray-600">
+                    <div className="flex-center space-x-1">
                       <Calendar className="w-3 h-3" />
                       <span>{article.date}</span>
                     </div>
@@ -231,7 +230,7 @@ export function BlogPage() {
                     <span>{article.readTime}</span>
                   </div>
 
-                  <h3 className="text-xl font-black text-[#0F172A] mb-3 leading-tight line-clamp-2">
+                  <h3 className="large-text text-[#0F172A] mb-3 leading-tight line-clamp-2">
                     {article.title}
                   </h3>
 
@@ -239,13 +238,13 @@ export function BlogPage() {
                     {article.excerpt}
                   </p>
 
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2 text-sm text-gray-600">
+                  <div className="flex-center justify-between">
+                    <div className="flex-center space-x-2 text-sm text-gray-600">
                       <User className="w-4 h-4" />
                       <span>{article.author}</span>
                     </div>
 
-                    <button className="text-[#2563EB] font-semibold hover:underline flex items-center space-x-1">
+                    <button className="text-[#2563EB] font-semibold hover:underline flex-center space-x-1">
                       <span>Read</span>
                       <ArrowRight className="w-4 h-4" />
                     </button>
@@ -256,17 +255,17 @@ export function BlogPage() {
           </div>
 
           {/* Pagination */}
-          <div className="flex items-center justify-center space-x-2 mt-12">
-            <button className="w-10 h-10 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center hover:border-[#2563EB] transition-colors">
+          <div className="flex-center justify-center space-x-2 mt-12">
+            <button className="w-10 h-10 rounded-full bg-white border-2 border-gray-200 flex-center justify-center hover:border-[#2563EB] transition-colors">
               1
             </button>
-            <button className="w-10 h-10 rounded-full bg-[#2563EB] text-white flex items-center justify-center">
+            <button className="w-10 h-10 rounded-full bg-[#2563EB] text-white flex-center justify-center">
               2
             </button>
-            <button className="w-10 h-10 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center hover:border-[#2563EB] transition-colors">
+            <button className="w-10 h-10 rounded-full bg-white border-2 border-gray-200 flex-center justify-center hover:border-[#2563EB] transition-colors">
               3
             </button>
-            <button className="w-10 h-10 rounded-full bg-white border-2 border-gray-200 flex items-center justify-center hover:border-[#2563EB] transition-colors">
+            <button className="w-10 h-10 rounded-full bg-white border-2 border-gray-200 flex-center justify-center hover:border-[#2563EB] transition-colors">
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
@@ -275,7 +274,7 @@ export function BlogPage() {
 
       {/* Newsletter Subscribe */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -289,7 +288,7 @@ export function BlogPage() {
               <p className="text-xl text-blue-100 max-w-3xl mx-auto">
                 Get the latest workforce insights, compliance updates, and industry trends delivered to your inbox
               </p>
-              
+
               <div className="max-w-xl mx-auto">
                 <div className="flex flex-col sm:flex-row gap-4">
                   <input

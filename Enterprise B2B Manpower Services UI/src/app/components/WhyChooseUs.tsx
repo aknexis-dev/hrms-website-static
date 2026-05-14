@@ -27,18 +27,18 @@ const benefits = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section className="section-padding bg-white">
+      <div className="container-responsive">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-block px-5 py-2 bg-blue-100 text-[#2563EB] rounded-full text-sm font-semibold mb-4">
+          <div className="badge-blue mb-4">
             Why Choose Us
           </div>
-          <h2 className="text-5xl font-black text-[#0F172A] mb-4">
+          <h2 className="section-title">
             Your Trusted Manpower Partner
           </h2>
         </motion.div>
@@ -53,12 +53,12 @@ export function WhyChooseUs() {
           >
             <div className="rounded-[32px] overflow-hidden shadow-2xl">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1758518731468-98e90ffd7430?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaXZlcnNlJTIwYnVzaW5lc3MlMjBwcm9mZXNzaW9uYWxzJTIwdGVhbXxlbnwxfHx8fDE3NzEyMTU5MTN8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Professional Team"
+                src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop"
+                alt="Modern Office Environment"
                 className="w-full h-[500px] object-cover"
               />
             </div>
-            
+
             {/* Progress Indicator */}
             <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-2xl">
               <div className="flex items-center space-x-4">
@@ -87,14 +87,14 @@ export function WhyChooseUs() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white/80 backdrop-blur-xl rounded-[24px] p-6 border border-gray-100 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="card-container !p-6"
               >
                 <div className="flex items-start space-x-4">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#2563EB] to-[#1e40af] flex items-center justify-center flex-shrink-0 shadow-lg">
+                  <div className="icon-box !w-14 !h-14 flex-shrink-0">
                     <benefit.icon className="w-7 h-7 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-black text-[#0F172A] mb-2">
+                    <h3 className="large-text text-[#0F172A] mb-2">
                       {benefit.title}
                     </h3>
                     <p className="text-gray-600">

@@ -28,27 +28,27 @@ export function ContactPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#F8FAFC] via-white to-blue-50/30">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <section className="hero-section">
+        <div className="container-responsive">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-block px-5 py-2 bg-blue-100 text-[#2563EB] rounded-full text-sm font-semibold mb-6"
+              className="badge-blue mb-6"
             >
               Get In Touch
             </motion.div>
-            
+
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-5xl lg:text-6xl font-black text-[#0F172A] mb-6 leading-tight"
+              className="hero-title mb-6"
             >
               Request Workforce or Contact Our Team
             </motion.h1>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -62,8 +62,8 @@ export function ContactPage() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <section className="section-padding bg-white">
+        <div className="container-responsive">
           <div className="grid lg:grid-cols-5 gap-12">
             {/* Contact Form */}
             <motion.div
@@ -80,7 +80,7 @@ export function ContactPage() {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-semibold text-[#0F172A] mb-2">
+                      <label className="form-label">
                         Full Name *
                       </label>
                       <input
@@ -89,13 +89,13 @@ export function ContactPage() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-5 py-4 rounded-2xl border-2 border-gray-200 focus:border-[#2563EB] outline-none transition-colors"
+                        className="form-input"
                         placeholder="Your name"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-[#0F172A] mb-2">
+                      <label className="form-label">
                         Company Name *
                       </label>
                       <input
@@ -104,7 +104,7 @@ export function ContactPage() {
                         value={formData.company}
                         onChange={handleChange}
                         required
-                        className="w-full px-5 py-4 rounded-2xl border-2 border-gray-200 focus:border-[#2563EB] outline-none transition-colors"
+                        className="form-input"
                         placeholder="Your company"
                       />
                     </div>
@@ -112,7 +112,7 @@ export function ContactPage() {
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-sm font-semibold text-[#0F172A] mb-2">
+                      <label className="form-label">
                         Phone Number *
                       </label>
                       <input
@@ -121,13 +121,13 @@ export function ContactPage() {
                         value={formData.phone}
                         onChange={handleChange}
                         required
-                        className="w-full px-5 py-4 rounded-2xl border-2 border-gray-200 focus:border-[#2563EB] outline-none transition-colors"
+                        className="form-input"
                         placeholder="+91 XXXXX XXXXX"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-sm font-semibold text-[#0F172A] mb-2">
+                      <label className="form-label">
                         Email Address *
                       </label>
                       <input
@@ -136,14 +136,14 @@ export function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-5 py-4 rounded-2xl border-2 border-gray-200 focus:border-[#2563EB] outline-none transition-colors"
+                        className="form-input"
                         placeholder="your@email.com"
                       />
                     </div>
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-[#0F172A] mb-2">
+                    <label className="form-label">
                       Workforce Requirement *
                     </label>
                     <select
@@ -151,7 +151,7 @@ export function ContactPage() {
                       value={formData.requirement}
                       onChange={handleChange}
                       required
-                      className="w-full px-5 py-4 rounded-2xl border-2 border-gray-200 focus:border-[#2563EB] outline-none transition-colors"
+                      className="form-select"
                     >
                       <option value="">Select requirement type</option>
                       <option value="manufacturing">Manufacturing Workforce</option>
@@ -165,7 +165,7 @@ export function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-semibold text-[#0F172A] mb-2">
+                    <label className="form-label">
                       Message / Requirements Details
                     </label>
                     <textarea
@@ -173,14 +173,14 @@ export function ContactPage() {
                       value={formData.message}
                       onChange={handleChange}
                       rows={6}
-                      className="w-full px-5 py-4 rounded-2xl border-2 border-gray-200 focus:border-[#2563EB] outline-none transition-colors resize-none"
+                      className="form-textarea"
                       placeholder="Describe your workforce requirements, number of workers needed, location, timeline, etc."
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full px-10 py-5 bg-gradient-to-r from-[#2563EB] to-[#1e40af] text-white rounded-full font-black text-lg shadow-2xl hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
+                    className="w-full px-10 py-5 blue-button text-lg shadow-2xl hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
                   >
                     <Send className="w-5 h-5" />
                     <span>Submit Requirement</span>
@@ -197,11 +197,11 @@ export function ContactPage() {
               className="lg:col-span-2 space-y-6"
             >
               {/* Phone */}
-              <div className="bg-gradient-to-br from-blue-50 to-white rounded-[24px] p-8 shadow-lg border border-gray-100">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#2563EB] to-[#1e40af] flex items-center justify-center mb-6 shadow-lg">
+              <div className="contact-card">
+                <div className="contact-card-icon-box blue">
                   <Phone className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-black text-[#0F172A] mb-3">
+                <h3 className="large-text text-[#0F172A] mb-3">
                   Call Us
                 </h3>
                 <a href="tel:+919876543210" className="text-lg text-[#2563EB] font-semibold hover:underline block mb-2">
@@ -216,11 +216,11 @@ export function ContactPage() {
               </div>
 
               {/* Email */}
-              <div className="bg-gradient-to-br from-blue-50 to-white rounded-[24px] p-8 shadow-lg border border-gray-100">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#FACC15] to-yellow-600 flex items-center justify-center mb-6 shadow-lg">
+              <div className="contact-card">
+                <div className="contact-card-icon-box yellow">
                   <Mail className="w-7 h-7 text-[#0F172A]" />
                 </div>
-                <h3 className="text-xl font-black text-[#0F172A] mb-3">
+                <h3 className="large-text text-[#0F172A] mb-3">
                   Email Us
                 </h3>
                 <a href="mailto:contact@hrmsmanpower.com" className="text-lg text-[#2563EB] font-semibold hover:underline block mb-2">
@@ -235,11 +235,11 @@ export function ContactPage() {
               </div>
 
               {/* Office */}
-              <div className="bg-gradient-to-br from-blue-50 to-white rounded-[24px] p-8 shadow-lg border border-gray-100">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#2563EB] to-[#1e40af] flex items-center justify-center mb-6 shadow-lg">
+              <div className="contact-card">
+                <div className="contact-card-icon-box blue">
                   <MapPin className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-black text-[#0F172A] mb-3">
+                <h3 className="large-text text-[#0F172A] mb-3">
                   Corporate Office
                 </h3>
                 <p className="text-gray-700 leading-relaxed mb-4">
@@ -253,11 +253,11 @@ export function ContactPage() {
               </div>
 
               {/* Business Hours */}
-              <div className="bg-gradient-to-br from-blue-50 to-white rounded-[24px] p-8 shadow-lg border border-gray-100">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#FACC15] to-yellow-600 flex items-center justify-center mb-6 shadow-lg">
+              <div className="contact-card">
+                <div className="contact-card-icon-box yellow">
                   <Clock className="w-7 h-7 text-[#0F172A]" />
                 </div>
-                <h3 className="text-xl font-black text-[#0F172A] mb-3">
+                <h3 className="large-text text-[#0F172A] mb-3">
                   Business Hours
                 </h3>
                 <div className="space-y-2 text-gray-700">
@@ -282,7 +282,7 @@ export function ContactPage() {
 
       {/* Quick Hiring Assurance */}
       <section className="py-20 bg-gradient-to-r from-[#0F172A] via-[#1e293b] to-[#0F172A]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="container-responsive">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -291,7 +291,7 @@ export function ContactPage() {
               className="text-white"
             >
               <CheckCircle className="w-12 h-12 mx-auto mb-4 text-[#FACC15]" />
-              <h3 className="text-xl font-black mb-2">24-Hour Response</h3>
+              <h3 className="large-text mb-2">24-Hour Response</h3>
               <p className="text-gray-300 text-sm">
                 Our team responds to all inquiries within 24 hours
               </p>
@@ -304,7 +304,7 @@ export function ContactPage() {
               className="text-white"
             >
               <CheckCircle className="w-12 h-12 mx-auto mb-4 text-[#FACC15]" />
-              <h3 className="text-xl font-black mb-2">Free Consultation</h3>
+              <h3 className="large-text mb-2">Free Consultation</h3>
               <p className="text-gray-300 text-sm">
                 No-obligation consultation to understand your needs
               </p>
@@ -317,7 +317,7 @@ export function ContactPage() {
               className="text-white"
             >
               <CheckCircle className="w-12 h-12 mx-auto mb-4 text-[#FACC15]" />
-              <h3 className="text-xl font-black mb-2">Custom Proposal</h3>
+              <h3 className="large-text mb-2">Custom Proposal</h3>
               <p className="text-gray-300 text-sm">
                 Tailored workforce solution proposal for your requirement
               </p>

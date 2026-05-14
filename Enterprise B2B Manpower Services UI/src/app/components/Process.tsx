@@ -36,7 +36,7 @@ const steps = [
 
 export function Process() {
   return (
-    <section id="process" className="py-24 bg-gradient-to-br from-[#0F172A] via-[#1e293b] to-[#0F172A] relative overflow-hidden">
+    <section id="process" className="section-padding bg-gradient-to-br from-[#0F172A] via-[#1e293b] to-[#0F172A] relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
@@ -45,14 +45,14 @@ export function Process() {
         }} />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+      <div className="container-responsive relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <div className="inline-block px-5 py-2 bg-[#FACC15]/20 text-[#FACC15] rounded-full text-sm font-semibold mb-4">
+          <div className="badge-yellow mb-4">
             Our Process
           </div>
           <h2 className="text-5xl font-black text-white mb-4">
@@ -79,13 +79,13 @@ export function Process() {
               >
                 {/* Glowing Circle */}
                 <div className="relative mb-6">
-                  <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-br from-[#FACC15] to-yellow-600 flex items-center justify-center shadow-2xl shadow-[#FACC15]/30 relative z-10">
+                  <div className="step-icon-box mx-auto z-10">
                     <step.icon className="w-10 h-10 text-[#0F172A]" />
                   </div>
-                  
+
                   {/* Number Badge */}
-                  <div className="absolute -top-2 -right-2 w-12 h-12 rounded-full bg-[#2563EB] flex items-center justify-center shadow-xl border-4 border-[#0F172A] z-20">
-                    <span className="text-white font-black text-sm">{step.number}</span>
+                  <div className="step-number-badge !border-4 !border-[#0F172A] z-20">
+                    <span>{step.number}</span>
                   </div>
 
                   {/* Glow Effect */}
@@ -93,7 +93,7 @@ export function Process() {
                 </div>
 
                 <div className="text-center">
-                  <h3 className="text-xl font-black text-white mb-3">
+                  <h3 className="large-text text-white mb-3">
                     {step.title}
                   </h3>
                   <p className="text-gray-400 text-sm">

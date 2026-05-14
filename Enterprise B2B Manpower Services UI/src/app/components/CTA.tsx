@@ -3,13 +3,13 @@ import { ArrowRight, FileText } from 'lucide-react';
 
 export function CTA() {
   return (
-    <section className="py-24 bg-[#F8FAFC]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+    <section className="section-padding bg-[#F8FAFC]">
+      <div className="container-responsive">
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-[#2563EB] via-[#1e40af] to-[#1e3a8a] p-12 lg:p-20 shadow-2xl"
+          className="cta-banner !lg:p-20"
         >
           {/* Background Pattern */}
           <div className="absolute inset-0 opacity-10">
@@ -44,7 +44,7 @@ export function CTA() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-xl text-blue-100 max-w-3xl mx-auto"
+              className="cta-banner-text text-xl max-w-3xl mx-auto"
             >
               Get verified, skilled manpower deployed within 48-72 hours. Complete compliance, transparent pricing, and replacement guarantee.
             </motion.p>

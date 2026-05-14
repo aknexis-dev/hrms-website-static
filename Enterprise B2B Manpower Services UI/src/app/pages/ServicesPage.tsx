@@ -100,27 +100,27 @@ export function ServicesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden bg-gradient-to-br from-[#F8FAFC] via-white to-blue-50/30">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <section className="hero-section">
+        <div className="container-responsive">
           <div className="text-center max-w-4xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-block px-5 py-2 bg-blue-100 text-[#2563EB] rounded-full text-sm font-semibold mb-6"
+              className="badge-blue mb-6"
             >
               Complete Workforce Solutions
             </motion.div>
-            
+
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-5xl lg:text-6xl font-black text-[#0F172A] mb-6 leading-tight"
+              className="hero-title mb-6"
             >
               Workforce Solutions & Staffing Services
             </motion.h1>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -137,7 +137,7 @@ export function ServicesPage() {
             >
               <Link
                 to="/contact"
-                className="inline-flex items-center space-x-2 px-10 py-4 bg-gradient-to-r from-[#2563EB] to-[#1e40af] text-white rounded-full font-semibold shadow-2xl hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300"
+                className="blue-button px-10 py-4 inline-flex items-center space-x-2 shadow-2xl hover:shadow-blue-500/50 hover:scale-105 transition-all duration-300"
               >
                 <span>Request Manpower</span>
                 <ArrowRight className="w-5 h-5" />
@@ -148,18 +148,18 @@ export function ServicesPage() {
       </section>
 
       {/* Service Categories Grid */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <section className="section-padding bg-white">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-black text-[#0F172A] mb-4">
+            <h2 className="section-title">
               Our Service Categories
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="section-subtitle">
               End-to-end workforce solutions tailored to your industry and business requirements
             </p>
           </motion.div>
@@ -173,30 +173,30 @@ export function ServicesPage() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -8 }}
-                className="group bg-white rounded-[28px] p-8 shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-100"
+                className="group card-container"
               >
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#2563EB] to-[#1e40af] flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                <div className="icon-box mb-6 group-hover:scale-110">
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-                
+
                 <h3 className="text-2xl font-black text-[#0F172A] mb-3">
                   {service.title}
                 </h3>
-                
+
                 <p className="text-gray-600 mb-6">
                   {service.description}
                 </p>
-                
+
                 <div className="space-y-2 mb-6">
                   {service.features.map((feature, fIndex) => (
-                    <div key={fIndex} className="flex items-center space-x-2 text-sm">
+                    <div key={fIndex} className="list-item-dot text-sm">
                       <CheckCircle2 className="w-4 h-4 text-[#FACC15] flex-shrink-0" />
-                      <span className="text-gray-700">{feature}</span>
+                      <span className="text-gray-700 font-normal">{feature}</span>
                     </div>
                   ))}
                 </div>
-                
-                <button className="text-[#2563EB] font-semibold flex items-center space-x-2 group-hover:space-x-3 transition-all duration-300">
+
+                <button className="text-button-blue group-hover:space-x-3">
                   <span>View Details</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
@@ -207,23 +207,23 @@ export function ServicesPage() {
       </section>
 
       {/* Engagement Models */}
-      <section className="py-24 bg-[#F8FAFC]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <section className="section-padding bg-[#F8FAFC]">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-black text-[#0F172A] mb-4">
+            <h2 className="section-title">
               Hiring Engagement Models
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="section-subtitle">
               Flexible engagement models to match your business requirements
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="column-grid gap-6">
             {engagementModels.map((model, index) => (
               <motion.div
                 key={index}
@@ -231,18 +231,18 @@ export function ServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-[24px] p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+                className="card-container"
               >
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#FACC15] to-yellow-600 flex items-center justify-center mb-4 shadow-lg">
-                  <span className="text-[#0F172A] font-black text-xl">{index + 1}</span>
+                <div className="number-box-yellow mb-4">
+                  <span>{index + 1}</span>
                 </div>
-                <h3 className="text-xl font-black text-[#0F172A] mb-2">
+                <h3 className="large-text text-[#0F172A] mb-2">
                   {model.title}
                 </h3>
                 <p className="text-gray-600 text-sm mb-3">
                   {model.description}
                 </p>
-                <div className="inline-block px-4 py-2 bg-blue-50 text-[#2563EB] rounded-full text-sm font-semibold">
+                <div className="badge-blue !bg-blue-50 !px-4 !py-2">
                   {model.duration}
                 </div>
               </motion.div>
@@ -253,7 +253,7 @@ export function ServicesPage() {
 
       {/* Compliance Assurance */}
       <section className="py-20 bg-gradient-to-r from-[#0F172A] via-[#1e293b] to-[#0F172A]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="container-responsive">
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -262,7 +262,7 @@ export function ServicesPage() {
               className="text-white"
             >
               <Shield className="w-12 h-12 mx-auto mb-4 text-[#FACC15]" />
-              <h3 className="text-xl font-black mb-2">100% Legal Compliance</h3>
+              <h3 className="large-text mb-2">100% Legal Compliance</h3>
               <p className="text-gray-300 text-sm">
                 Full adherence to labour laws, EPF/ESI, and statutory regulations
               </p>
@@ -275,7 +275,7 @@ export function ServicesPage() {
               className="text-white"
             >
               <FileCheck className="w-12 h-12 mx-auto mb-4 text-[#FACC15]" />
-              <h3 className="text-xl font-black mb-2">Complete Documentation</h3>
+              <h3 className="large-text mb-2">Complete Documentation</h3>
               <p className="text-gray-300 text-sm">
                 All licenses, certificates, and compliance documents provided
               </p>
@@ -288,7 +288,7 @@ export function ServicesPage() {
               className="text-white"
             >
               <CheckCircle2 className="w-12 h-12 mx-auto mb-4 text-[#FACC15]" />
-              <h3 className="text-xl font-black mb-2">Verified Workforce</h3>
+              <h3 className="large-text mb-2">Verified Workforce</h3>
               <p className="text-gray-300 text-sm">
                 Thorough background checks and skill verification for all candidates
               </p>
@@ -298,24 +298,24 @@ export function ServicesPage() {
       </section>
 
       {/* Mid-Page CTA */}
-      <section className="py-24 bg-white">
+      <section className="section-padding bg-white">
         <div className="max-w-5xl mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-[#2563EB] via-[#1e40af] to-[#1e3a8a] p-12 lg:p-16 shadow-2xl text-center"
+            className="cta-banner"
           >
-            <div className="relative z-10">
-              <h2 className="text-3xl lg:text-4xl font-black text-white mb-4">
+            <div className="relative z-10 text-center">
+              <h2 className="cta-banner-title mb-4">
                 Ready to Scale Your Workforce?
               </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              <p className="cta-banner-text mb-8">
                 Get a customized workforce solution proposal within 24 hours
               </p>
               <Link
                 to="/contact"
-                className="inline-flex items-center space-x-2 px-10 py-4 bg-white text-[#2563EB] rounded-full font-black shadow-2xl hover:scale-105 transition-all duration-300"
+                className="px-10 py-4 bg-white text-[#2563EB] rounded-full font-black shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center space-x-2"
               >
                 <span>Get Free Proposal</span>
                 <ArrowRight className="w-5 h-5" />
@@ -326,7 +326,7 @@ export function ServicesPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 bg-[#F8FAFC]">
+      <section className="section-padding bg-[#F8FAFC]">
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -334,10 +334,10 @@ export function ServicesPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl lg:text-5xl font-black text-[#0F172A] mb-4">
+            <h2 className="section-title">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-gray-600">
+            <p className="section-subtitle">
               Common queries about our workforce services
             </p>
           </motion.div>
@@ -353,18 +353,18 @@ export function ServicesPage() {
               >
                 <Accordion.Item
                   value={`item-${index}`}
-                  className="bg-white rounded-[20px] shadow-lg overflow-hidden border border-gray-100"
+                  className="accordion-item"
                 >
                   <Accordion.Header>
-                    <Accordion.Trigger className="w-full flex items-center justify-between p-6 text-left group hover:bg-gray-50 transition-colors">
-                      <span className="text-lg font-black text-[#0F172A] pr-8">
+                    <Accordion.Trigger className="accordion-trigger">
+                      <span className="question">
                         {faq.question}
                       </span>
-                      <ChevronDown className="w-5 h-5 text-[#2563EB] transition-transform duration-300 group-data-[state=open]:rotate-180 flex-shrink-0" />
+                      <ChevronDown className="icon" />
                     </Accordion.Trigger>
                   </Accordion.Header>
-                  <Accordion.Content className="overflow-hidden data-[state=open]:animate-accordion-down data-[state=closed]:animate-accordion-up">
-                    <div className="px-6 pb-6 text-gray-600 leading-relaxed">
+                  <Accordion.Content className="accordion-content">
+                    <div className="accordion-content-text">
                       {faq.answer}
                     </div>
                   </Accordion.Content>
@@ -376,31 +376,31 @@ export function ServicesPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+      <section className="section-padding bg-white">
+        <div className="container-responsive">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="relative overflow-hidden rounded-[32px] bg-gradient-to-br from-[#2563EB] via-[#1e40af] to-[#1e3a8a] p-12 lg:p-20 shadow-2xl"
+            className="cta-banner"
           >
             <div className="relative z-10 text-center space-y-8">
-              <h2 className="text-4xl lg:text-5xl font-black text-white leading-tight">
+              <h2 className="cta-banner-title">
                 Need Skilled Workforce Today?
               </h2>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+              <p className="cta-banner-text">
                 Connect with our workforce specialists and get your requirements fulfilled within 48-72 hours
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <Link
                   to="/contact"
-                  className="px-12 py-5 bg-white text-[#2563EB] rounded-full font-black text-lg shadow-2xl hover:scale-105 transition-all duration-300"
+                  className="px-12 py-5 bg-white text-[#2563EB] rounded-full font-black text-lg shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center"
                 >
                   Get Proposal
                 </Link>
                 <a
                   href="tel:+919876543210"
-                  className="px-12 py-5 bg-[#FACC15] text-[#0F172A] rounded-full font-black text-lg shadow-2xl hover:scale-105 transition-all duration-300"
+                  className="px-12 py-5 bg-[#FACC15] text-[#0F172A] rounded-full font-black text-lg shadow-2xl hover:scale-105 transition-all duration-300 inline-flex items-center"
                 >
                   Call Now
                 </a>
